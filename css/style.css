@@ -23,11 +23,19 @@
 }
 
 .main-title {
+  opacity: 0;
+  transform: translate(0, 100%);
+  transition: 0.6s ease;
   font-size: 36px;
   text-align: center;
   color: #5D82E1;
   font-weight: 600;
   margin-bottom: 90px;
+}
+
+.main-title._active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 @media (max-width: 375px) {
@@ -369,6 +377,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   transform: rotate(45deg);
   top: calc(50% - 8px);
   left: 0;
+  transition: 0.2s ease;
+}
+
+.working__list li:hover::before {
+  transform: rotate(0deg);
+  transition: 0.2s ease;
 }
 
 .working__list a {
@@ -501,6 +515,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   text-decoration: none;
   font-weight: 600;
   padding: 13px 0px;
+}
+
+@media (max-width: 2560px) {
+  .working {
+    padding-top: 228px;
+    padding-bottom: 480px;
+  }
+}
+
+@media (max-width: 2000px) {
+  .working {
+    padding-top: 140px;
+    padding-bottom: 220px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -655,6 +683,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 }
 
 .find-item__el {
+  transform: scale(0);
+  transition: 0.5s ease;
   background-color: #fff;
   border-radius: 15px;
   position: relative;
@@ -663,6 +693,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 24px 32px rgba(0, 0, 0, 0.04);
   cursor: pointer;
   transition: 0.3s ease;
+}
+
+.find-item__el._active {
+  transform: scale(1);
 }
 
 .find-item__el:hover {
@@ -715,6 +749,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   z-index: -1;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0;
+  transition: 1s ease 0.5s;
+}
+
+.findElem._active {
+  opacity: 1;
 }
 
 @media (max-width: 1130px) {
@@ -885,7 +925,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 .slider-item__bg {
   position: relative;
   overflow: hidden;
-  width: 100%;
   padding: 0 0 148% 0;
   border-radius: 11px;
 }
@@ -1141,6 +1180,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
   top: 0;
   left: -120px;
   z-index: 2;
+}
+
+@media (max-width: 2600px) {
+  .job-image2 {
+    display: none;
+  }
+}
+
+@media (max-width: 1600px) {
+  .job-image2 {
+    display: block;
+  }
 }
 
 @media (max-width: 1050px) {
